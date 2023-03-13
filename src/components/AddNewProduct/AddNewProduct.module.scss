@@ -1,0 +1,29 @@
+.addNewItemContainer {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem;
+
+    input {
+        width: 15rem;
+    }
+
+    .chipContainer {
+        padding: 0.25rem;
+        display: flex;
+        gap: 0.25rem;
+
+        .chip {
+            width: min-content;
+            padding: 0.25rem;
+            display: flex;
+            gap: 0.25rem;
+            background-color: #ccc;
+        }
+    }
+
+    .addNewBtn {
+        width: 10rem;
+    }
+}

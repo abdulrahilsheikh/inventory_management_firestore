@@ -1,0 +1,42 @@
+.pageContainer {
+    display: flex;
+
+    .listContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        .listItem {
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            .chipContainer {
+                padding: 0.25rem;
+                display: flex;
+                gap: 0.25rem;
+
+                .chip {
+                    width: fit-content;
+                    padding: 0.5rem 1rem;
+                    display: flex;
+                    gap: 0.25rem;
+                    background-color: #ccc;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .btns {
+                background-color: #ccc;
+                width: fit-content;
+                padding: 0.25rem 1rem;
+                border-radius: 0.5rem;
+            }
+
+            &:nth-of-type(even) {
+                background-color: beige;
+            }
+        }
+    }
+}
