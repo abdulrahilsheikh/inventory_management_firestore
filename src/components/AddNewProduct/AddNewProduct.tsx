@@ -68,38 +68,48 @@ function AddNewProduct({ defaultValues, closeModal }: AddNewProductType) {
 		}
 	};
 	return (
-		<div className={styles.addNewItemContainer}>
-			<input
-				value={formState.itemName}
-				placeholder="Item name"
-				onChange={(e) => handleFormInput("itemName", e.target.value)}
-			/>
-			<input
-				value={formState.quantity}
-				placeholder="Qunatity"
-				type={"number"}
-				min={0}
-				onChange={(e) => handleFormInput("quantity", +e.target.value)}
-			/>
-			<div className={styles.chipContainer}>
-				{formState.property.map((a, idx) => (
-					<div className={styles.chip}>
-						{a}{" "}
-						<button onClick={() => removeProperty(idx)}>X</button>
-					</div>
-				))}
+		<div className={styles.page}>
+			<div className={styles.addNewItemContainer}>
+				<input
+					value={formState.itemName}
+					placeholder="Item name"
+					onChange={(e) =>
+						handleFormInput("itemName", e.target.value)
+					}
+				/>
+				<input
+					value={formState.quantity}
+					placeholder="Qunatity"
+					type={"number"}
+					min={0}
+					onChange={(e) =>
+						handleFormInput("quantity", +e.target.value)
+					}
+				/>
+				<div className={styles.chipContainer}>
+					{formState.property.map((a, idx) => (
+						<div className={styles.chip}>
+							{a}{" "}
+							<button onClick={() => removeProperty(idx)}>
+								X
+							</button>
+						</div>
+					))}
+				</div>
+				<input
+					value={property}
+					placeholder="Property"
+					onChange={(e) => setProperty(e.target.value)}
+				/>
+				<button
+					className={styles.addNewBtn}
+					onClick={(e) => addProperty()}>
+					Add new Property
+				</button>
+				<button className={styles.addNewBtn} onClick={submitData}>
+					Submitt Item
+				</button>
 			</div>
-			<input
-				value={property}
-				placeholder="Property"
-				onChange={(e) => setProperty(e.target.value)}
-			/>
-			<button className={styles.addNewBtn} onClick={(e) => addProperty()}>
-				Add new Property
-			</button>
-			<button className={styles.addNewBtn} onClick={submitData}>
-				Submitt Item
-			</button>
 		</div>
 	);
 }

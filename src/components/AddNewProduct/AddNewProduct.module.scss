@@ -1,29 +1,61 @@
-.addNewItemContainer {
-    background-color: beige;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    padding: 0.5rem;
+.page {
+    padding: 2rem;
 
-    input {
-        width: 15rem;
-    }
-
-    .chipContainer {
-        padding: 0.25rem;
+    .addNewItemContainer {
+        box-shadow: 0px 0px 5px 1px rgba($color: #ccc, $alpha: 0.5);
+        background-color: var(--white);
         display: flex;
+        flex-direction: column;
         gap: 0.25rem;
+        padding: 1.5rem;
+        width: 25rem;
+        border-radius: 0.5rem;
 
-        .chip {
-            width: min-content;
+        input {
+            width: 15rem;
+            padding: 0.5rem;
+            outline: none;
+            border: none;
+            font-size: 1.125rem;
+            accent-color: var(--paynes-gray);
+
+            &:focus {
+                border-bottom: 2px solid var(--paynes-gray);
+            }
+        }
+
+        .chipContainer {
             padding: 0.25rem;
             display: flex;
             gap: 0.25rem;
-            background-color: #ccc;
-        }
-    }
 
-    .addNewBtn {
-        width: 10rem;
+            .chip {
+                width: min-content;
+                padding: 0.25rem 0.25rem 0.25rem 1rem;
+                display: flex;
+                gap: 0.5rem;
+                color: var(--white);
+                border-radius: 1rem;
+                background-color: var(--paynes-gray);
+
+                button {
+                    color: var(--paynes-gray);
+                    border-radius: 1rem;
+                    background-color: var(--white);
+                    outline: none;
+                    border: none;
+                    width: 1.5rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.25rem;
+                    }
+                }
+            }
+        }
+
+        .addNewBtn {
+            width: 10rem;
+        }
     }
 }

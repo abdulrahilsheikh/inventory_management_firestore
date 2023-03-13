@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Hachi+Maru+Pop&family=IBM+Plex+Mono&family=Montserrat+Alternates&family=Poppins:ital,wght@1,300&family=VT323&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', monospace;
 }
+
+:root {
+
+  --paynes-gray: #4C5962ff;
+  --white: #FDFDFDff;
+  --seasalt: #F6F6F6ff;
+  --white-2: #FFFFFFff;
+  --white-3: #FEFEFEff;
+  --prussian-blue: #213247ff;
+  transition: all 0.25s ease;
+}
+
+/* 
+ */
